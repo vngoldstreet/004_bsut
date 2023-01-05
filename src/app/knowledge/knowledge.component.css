@@ -1,0 +1,290 @@
+
+.font-size-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.font-size-content {
+    font-size: 14px;
+    text-align: justify;
+    padding: 5px 0px;
+}
+
+.time-zone{
+    /* font-family: 'Roboto', sans-serif; */
+    font-size: 14px;
+}
+
+.fast-new{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.fast-title{
+    display: flex;
+    align-items: flex-start;
+}
+
+
+.img-fast{
+    width: 100%;
+    max-height: 80px;
+    min-height: 80px;
+    border: 1px solid hsl(48, 70%, 48%, 0.2);
+}
+
+a{
+    color: #402641;
+    text-decoration: none;
+}
+
+.home-title {
+    font-size: 20px;
+    /* color: white; */
+    padding: 10px 10px;
+    font-weight: 700;
+    border-left: 7px solid #CFAC24;
+    color: #402641;
+    margin-bottom: 10px;
+}
+
+
+.home-title-detail {
+    font-size: 20px;
+    font-weight: 700;
+    color: #402641;
+
+}
+.fast-new{
+    border-bottom: 1px solid hsl(48, 70%, 48%, 0.2);
+
+}
+
+@media only screen and (max-width: 575.98px) {
+    .img-fast{
+        max-height:max-content;
+    }
+    .fast-new{
+        padding: 10px 0px;
+    }
+    .font-size-title {
+        padding-top: 10px;
+    }
+    /* .img-mobile{
+        width: 30%;
+    }
+    .title-mobile{
+        width: 70%;
+    } */
+}
+
+img.detail-img-news{
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    font-size: 2rem;
+    color: rgb(0, 119, 119);
+}
+
+.btn-warning-bs {
+    background: #F38121;
+    color: aliceblue;
+}
+
+.max-hight{
+    max-height: 400px;
+    min-height: 400px;
+}
+
+#carouselExampleCaptions img {
+    max-height: 600px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+div.carousel-area {
+    position: relative;
+}
+
+div.card-area {
+    position: absolute;
+
+}
+
+.title {
+    font-size: 2rem;
+    color: rgb(0, 119, 119);
+}
+
+.med-color {
+    color: rgb(0, 119, 119);
+}
+
+.border-med {
+    border: 2px solid #F38121;
+}
+
+.bg-med {
+    background-color: #f38021c9;
+}
+
+span.bg-med {
+    color: aliceblue;
+}
+
+button.example-custom-date-class {
+    background: #F38121;
+    border-radius: 100%;
+}
+
+.btn-warning-bs {
+    background: #F38121;
+    color: aliceblue;
+}
+
+.carousel-caption {
+    bottom: 30% !important;
+}
+
+/* ------------- */
+.card-wrapper {
+    margin-bottom: 30px;
+}
+
+.card-image .card .card-img-wrapper {
+    height: 100%;
+}
+
+.card-image .card .card-body {
+    display: none;
+}
+
+.card-image-title-description .card .card-img-wrapper {
+    max-height: 160px;
+}
+
+.card-image-title-description .card {
+    position: relative;
+    min-height: 300px;
+}
+
+.card-image-title-description .card .card-body {
+    height: auto;
+    position: relative;
+    top: 0;
+    margin-bottom: -70px;
+}
+
+.card-image-title-description .card:hover .card-body {
+    top: -70px;
+}
+
+.card-image-title-description .card .card-body .card-title {
+    margin-bottom: .75rem;
+}
+
+.card {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    min-height: 400px;
+    height: 100%;
+}
+
+.card:hover {
+    box-shadow: 8px 12px 31px -10px #ab98ab;
+}
+
+.card-img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    overflow: hidden;
+}
+
+.card-img-wrapper img {
+    transition: 1.5s ease;
+}
+
+.card:hover .card-img-wrapper img {
+    transform: scale(1.15);
+}
+
+.card-body .card-title {
+    margin-bottom: calc(50%);
+    transition: 1.5s ease;
+}
+
+.card:hover .card-body .card-title {
+    margin-bottom: .75rem;
+}
+
+.card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background-color: #fff;
+    transition: 1.5s ease;
+}
+
+.card-content {
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    transition: 1.5s ease;
+}
+
+.card:hover .card-body {
+    height: 80%;
+}
+
+.card:hover .card-content {
+    bottom: 0;
+}
+
+
+
+/* Video giới htieuej */
+.text-icon-color {
+    color: #F38121;
+}
+
+.social-med:hover span {
+    color: #0C6DFD !important;
+    border-color: #0C6DFD !important;
+    animation-delay: 0.5s;
+}
+
+.social-med {
+    border-color: #F27926 !important;
+}
+
+.social-text {
+    color: #F27926;
+}
+
+.social-container a {
+    text-decoration: none;
+}
+
+
+@media screen and (max-device-width: 640px) and (orientation: landscape) {
+    .social-flex {
+        flex-direction: column !important;
+    }
+}
+
+.card-img-top{
+    min-height: 200px;
+    max-height: 200px;
+    object-fit: cover;
+}

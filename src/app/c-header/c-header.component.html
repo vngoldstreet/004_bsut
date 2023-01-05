@@ -1,0 +1,48 @@
+<div class="menu sticky-top">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div *ngIf="over_side" class="left-menu">
+        <button class="hover" mat-menu>
+          <img class="mt-1 mb-1" height="60px" src="assets/img/Artboard 1BSUTlogo.png" alt="">
+        </button>
+        <button class="hover" mat-menu><a href="/">Trang chủ</a></button>
+        <button class="hover" mat-menu><a href="/gioi-thieu">Giới thiệu</a></button>
+        <button class="hover" mat-menu><a href="/kien-thuc-chia-se">Kiến thức - Chia sẻ</a></button>
+        <button class="hover" mat-menu><a href="/lien-he">Liên hệ</a></button>
+      </div>
+      <div class="right-menu">
+        <div>
+          <!-- <button class="hover" mat-menu><a href="/hoi-bac-si">Hỏi bác sĩ</a></button> -->
+          <button *ngIf="over_side" class="btn btn-outline-warning" (click)="gotoUrl('#dat-lich-kham')">
+            <a href="#dat-lich-kham">HỎI BÁC SĨ <span class="fs-6 fw-lighter">(miễn phí)</span> </a>
+          </button>
+        </div>
+        <div *ngIf="!over_side">
+          <button class="hover" mat-icon-button (click)="drawer.toggle()">
+            <mat-icon style="font-size: 30px;" class="icon-size" *ngIf="!drawer.opened">menu</mat-icon>
+            <mat-icon style="font-size: 30px;" class="icon-size" *ngIf="drawer.opened">close</mat-icon>
+        </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <mat-drawer-container class="example-container z-9999 sticky-top" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <ul style="padding: 0;line-height: 2rem;">
+        <li style="list-style-type: none; font-weight: bold; font-size: 15px;">
+          <a href="/">Trang chủ</a>
+        </li>
+        <li style="list-style-type: none; font-weight: bold; font-size: 15px;">
+          <a href="/gioi-thieu">Giới thiệu</a>
+        </li>
+        <li style="list-style-type: none; font-weight: bold; font-size: 15px;">
+          <a href="/chia-se-kinh-nghiem">Chia sẻ kinh nghiệm</a>
+        </li>
+        <li style="list-style-type: none; font-weight: bold; font-size: 15px;">
+          <a href="/lien-he">Liên hệ</a>
+        </li>
+        <li style="list-style-type: none; font-weight: bold; font-size: 15px;">
+          <a href="/dat-lich-kham">Đặt lịch khám</a>
+        </li>
+      </ul>
+    </mat-drawer>
+  </mat-drawer-container>

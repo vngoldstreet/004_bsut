@@ -1,0 +1,34 @@
+
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-6">
+        <iframe width="100%" height="400" src="https://www.youtube.com/embed/ptMjsEDyymY" title="YouTube video player"
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+      <div class="col-lg-6 lazy-load">
+        <h2 class="title mb-0">
+          Tiến sĩ Bác sĩ Nguyễn Quang Thái <br>
+          <p class="fw-light mt-1">Trưởng khoa Ngoại bệnh viện K</p>
+        </h2>
+        <p class="fs-6 mt-0">
+          - Hơn 30 năm kinh nghiệm trong lĩnh vực Ung thư.<br>
+          - Chuyên gia phẫu thuật mổ mở và nội soi các bệnh ung bướu.<br>
+          - Đại diện Việt Nam tham dự các hội thảo chuyên khoa Ung thư nổi tiếng trên thế giới.<br>
+          - Trưởng ban cố vấn y khoa của Bacsiungthu.net
+        </p>
+
+        <a href="tin-tuc/{{item.url}}" *ngFor="let item of hot_news" class="d-flex align-items-center mt-3 hotnews-desc">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-bookmark-check text-icon-color" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+          </svg>
+          <div class="desc ms-3">
+            <h4 class="med-color p-0 m-0 fw-bold fs-5">{{item.title}}</h4>
+            <p class="desc-meta fw-light pt-1 m-0">{{item.descrip}}</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  

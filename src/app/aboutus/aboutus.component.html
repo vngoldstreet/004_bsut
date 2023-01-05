@@ -1,0 +1,84 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-lg-6 col-sm-12">
+            <div class="w-100 lh-lg h-100 d-flex justify-content-center flex-column">
+                <h1 class="fw-bold fs-2 title">Tiến sĩ Bác sĩ Nguyễn Quang Thái</h1>
+                <h2 class="fs-5 lh-base fw-light">
+                    Bacsiungthu.net là Chuyên trang chia sẻ kiến thức các bệnh lý và tư vấn trực tuyến Miễn Phí cho các
+                    bệnh nhân ung bướu.<br>Một kênh thông tin hữu ích và phi lợi nhuận, được sáng lập bởi Tiến sĩ, Bác
+                    sĩ, Trưởng khoa Ngoại ung thư, Bệnh viện K - Nguyễn Quang Thái.
+                </h2>
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-12 text-align-center">
+            <img class="w-100" src="/assets/img/bacsicuoi.jpg" alt="">
+        </div>
+    </div>
+</div>
+<div class="bg-opinion pt-5 pb-5 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-4">
+                <div class="d-flex justify-content-center flex-column align-items-center">
+                    <i class='fas fa-briefcase fs-1'></i>
+                    <h3 class="fs-2 fw-normal mt-4">
+                        TẦM NHÌN
+                    </h3>
+                    <p class="text-center fs-6 fw-light">
+                        Trở thành Website uy tín hàng đầu tại Việt Nam trong việc kết nối các Bác sĩ chuyên khoa Ung
+                        bướu vừa giỏi nghề, vừa tận tâm với các bệnh nhân Ung bướu.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-4">
+                <div class="d-flex justify-content-center flex-column align-items-center">
+                    <i class='fas fa-heartbeat fs-1'></i>
+                    <h3 class="fs-2 fw-normal mt-4">
+                        SỨ MỆNH
+                    </h3>
+                    <p class="text-center fs-6 fw-light">
+                        Liên tục lắng nghe, thấu hiểu và tư vấn bằng tất cả tài năng, y đức và sự cảm thông cho Cộng
+                        đồng bệnh nhân Ung bướu Việt Nam.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-4">
+                <div class="d-flex justify-content-center flex-column align-items-center">
+                    <i class='fas fa-user-md fs-1'></i>
+                    <h3 class="fs-2 fw-normal mt-4">
+                        GIÁ TRỊ CỐT LÕI
+                    </h3>
+                    <p class="text-center fs-6 fw-light">
+                        Chuyên khoa giỏi - Tâm y đức - Lòng yêu thương.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div *ngFor="let item of doctors" class="col-lg-3 col-sm-12">
+            <div class="d-flex flex-column align-items-center">
+                <img class="border rounded-circle border-warning w-50" src="{{item.image}}" alt="{{item.desc}}" />
+                <h5 class="fs-4 mt-3 text-center">{{item.name}}</h5>
+                <span class="fs-6 text-center">({{item.job}})</span>
+                <p class="text-center fs-6 fw-lighter mt-2 fst-italic">
+                    {{item.desc}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <h3 class="fs-1 fw-bold text-center font-monte-carlo text-warning-bs">
+        THANK YOU!
+    </h3>
+    <p class="text-center fs-3 lh-lg font-monte-carlo">
+        Để <a href="/">bacsiungthu.net</a> hoạt động đóng góp cho cộng đồng ung bướu Việt Nam như ngày hôm nay, Chúng
+        tôi trân trọng và cảm kích gửi lời cảm ơn tới những con người thầm lặng đã góp công sức xây dựng: coder,
+        designer, marketer, SEOer, content manager, các mạnh thường quân và các y bác sĩ chuyên khoa ung bướu.
+    </p>
+</div>

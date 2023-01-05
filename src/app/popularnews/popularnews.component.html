@@ -1,0 +1,26 @@
+<div class="container mt-5">
+  <h2 class="title">
+    Tin tức tiêu điểm
+  </h2>
+  <div class="row">
+    <a href="tin-tuc/{{item.url}}" class="col-lg-3 mt-3" *ngFor="let item of hot_news">
+      <div class="card w-100" style="width: 18rem;">
+        <img src="{{apiUrl}}{{item.url}}" class="card-img-top w-100" alt="{{item.title}}" title="{{item.title}}"
+          loading="lazy">
+        <div class="card-body">
+          <h3 class="med-color p-0 m-0 fw-bold fs-5">{{item.title | slice:0:50}}...</h3>
+          <p class="fs-6 mt-1 text-dark">{{item.descrip| slice:0:100}}...</p>
+          <div class="d-flex justify-content-between">
+            <span class="fw-lighter text-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-eye-fill fw-lighter" viewBox="0 0 16 16">
+                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+              </svg> {{item.viewer}}</span>
+            <span class="fw-lighter text-dark">{{item.created_at | date:'dd/mm/YYYY H:mm'}}</span>
+          </div>
+        </div>
+      </div>
+    </a>
+    <!-- <button class="btn btn-warning-bs mt-5" type="submit" (click)="onLoadmore()">Xem thêm</button> -->
+  </div>
+</div>

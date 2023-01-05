@@ -1,0 +1,55 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8">
+            <h2 class="title">
+                Kiến thức & Chia sẻ
+            </h2>
+            <div class="row">
+                <a href="tin-tuc/{{item.url}}" class="col-lg-4 mt-3" *ngFor="let item of hot_news">
+                    <div class="card w-100 max-hight" style="width: 18rem;">
+                        <img src="{{apiUrl}}{{item.url}}" class="card-img-top w-100" alt="{{item.title}}"
+                            title="{{item.title}}" loading="lazy">
+                        <div class="card-body">
+                            <h3 class="med-color p-0 m-0 fw-bold fs-5">{{item.title | slice:0:50}}...</h3>
+                            <p class="fs-6 mt-1 text-black">{{item.descrip| slice:0:100}}...</p>
+                            <div class="d-flex justify-content-between">
+                                <span class="fw-lighter text-black"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" fill="currentColor" class="bi bi-eye-fill fw-lighter"
+                                        viewBox="0 0 16 16">
+                                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                                        <path
+                                            d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                                    </svg> {{item.viewer}}</span>
+                                <span class="fw-lighter text-black">{{item.created_at | date:'dd/mm/YYYY H:mm'}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- <button class="btn btn-warning-bs mt-5" type="submit" (click)="onLoadmore()">Xem thêm</button> -->
+                <button style="margin-top: 3px;" class="btn w-100" type="submit" (click)="onLoadmore()">Xem
+                    thêm</button>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <h3 class="home-title">Tin tức hot</h3>
+            <article class="fast-new" *ngFor="let data of hot_news">
+                <a href="tin-tuc/{{data.url}}" rel="noopener noreferrer">
+                    <div class="row fast-title">
+                        <div class="col-lg-4 col-sm-4">
+                            <img loading="lazy" class="img-fast" src="{{apiUrl}}{{data.url}}"
+                                alt="{{data.title}}-Bacsiungthu" title="{{data.title}}-Bacsiungthu">
+                        </div>
+                        <div class="col-lg-8 col-sm-8">
+                            <h3 class="font-size-title">
+                                {{data.title | slice:0:160}}
+                            </h3>
+                            <p class="time-zone">Thời gian: {{data.created_at| date :'short'}}</p>
+                        </div>
+                    </div>
+                    <p class="font-size-content">{{data.descrip | slice:0:160}}...</p>
+                </a>
+            </article>
+           
+        </div>
+    </div>
+</div>

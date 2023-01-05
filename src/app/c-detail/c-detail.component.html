@@ -1,0 +1,50 @@
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v13.0"
+    nonce="rAGicB5Z"></script>
+<div class="container">
+    <div class="content-detail mt-4">
+        <div class="row">
+            <div class="col-lg-8">
+                <div *ngIf="!loading" class="text-center">
+                    <div class="spinner-border text-warning" style="width: 3rem; height: 3rem;" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+                <div *ngIf="loading">
+                    <h1 title="{{data.title}} - Bacsiungthu.net" class="title">{{data.title + ' - Bacsiungthu.net'}}
+                    </h1>
+                    <span class="time-zone">{{data.created_at| date :'dd/MM/YYYY H:mm'}}</span>
+                    <h2 class="font-size-title"> <a *ngIf="loading" href="http://bacsiungthu.net"
+                            target="_blank">Bacsiungthu.net</a> -
+                        {{data.descrip}}</h2>
+                    <div *ngIf="data.url">
+                        <img class="detail-img-news" src="{{apiUrl}}{{data.url}}" alt="{{data.title}}-Bacsiungthu.net"
+                            title="{{data.title}}-Bacsiungthu.net">
+                    </div>
+                    <div class="font-size-content" [innerHTML]="data.content">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <h3 class="home-title">Tin tức liên quan</h3>
+                <article class="fast-new" *ngFor="let data of data_mores">
+                    <a href="tin-tuc/{{data.url}}" rel="noopener noreferrer">
+                        <div class="row fast-title">
+                            <div class="col-lg-4 col-sm-4">
+                                <img loading="lazy" class="img-fast" src="{{apiUrl}}{{data.url}}" alt="{{data.title}}-Bacsiungthu" title="{{data.title}}-Bacsiungthu">
+                            </div>
+                            <div class="col-lg-8 col-sm-8">
+                                <h3 class="font-size-title">
+                                    {{data.title | slice:0:160}}
+                                </h3>
+                                <p class="time-zone">Thời gian: {{data.created_at| date :'short'}}</p>
+                            </div>
+                        </div>
+                        <p class="font-size-content">{{data.descrip | slice:0:160}}...</p>
+                    </a>
+                </article>
+                <button style="margin-top: 3px;" class="btn btn-warning-bs w-100" type="submit" (click)="onLoadmore()">Xem thêm</button>
+            </div>
+        </div>
+    </div>
+</div>
